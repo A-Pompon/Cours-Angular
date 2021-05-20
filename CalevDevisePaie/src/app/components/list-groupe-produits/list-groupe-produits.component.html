@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="col-md-12">
+        <h4>Liste des groupes de produits</h4>
+    </div>
+    <table id="table_id">
+        <thead class="white_text #546e7a blue-grey darken-1">
+            <tr>
+                <th>#</th>
+                <th>Produit référent</th>
+                <th>Numéro de produit référent</th>
+                <th>Valeur abrégée</th>
+                <th>Valeur détaillée</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let g of groupeProduits">
+                <td>{{g.idGroupeProduit}}</td>
+                <td>{{g.produitReferent}}</td>
+                <td>{{g.numProduitReferent}}</td>
+                <td>{{g.valeurAbregee}}</td>
+                <td>{{g.valeurDetaillee}}</td> 
+                <td>
+                    <a routerLink="/edit-produits/{{g.idGroupeProduit}}" class="waves-effect waves-light btn right green">Editer | </a>
+                    <a routerLink="/delete-produits/{{g.idGroupeProduit}}" class="waves-effect waves-light btn right red">Supprimer</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

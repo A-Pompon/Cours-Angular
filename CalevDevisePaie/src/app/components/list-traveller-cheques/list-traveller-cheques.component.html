@@ -1,0 +1,55 @@
+<div class="row">
+    <div class="col-md-12">
+        <h4>Liste des chèques</h4>
+    </div>
+    <table id="table_id">
+        <thead class="white_text #546e7a blue-grey darken-1">
+            <tr>
+                <th>#</th>
+                <th>Taux de change</th>
+                <th>Nom proriétaire</th>
+                <th>Prénom propriétaire</th>
+                <th>Adresse</th>
+                <th>Ville</th>
+                <th>Code postal</th>
+                <th>Signature</th>
+                <th>Lieu émission</th>
+                <th>Date émission</th>
+                <th>Montant</th>
+                <th>Numéro de sécurité</th>
+                <th>Société émittrice</th>
+                <th>Nombre TC</th>
+                <th>Montant total</th>
+                <th>Code banque</th>
+                <th>Logo</th>
+                <th>Ordre de paiement</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let c of travellerChequess">
+                <td>{{c.idTC}}</td>
+                <td>{{c.tauxChange}}</td>
+                <td>{{c.nomProprietaire}}</td>
+                <td>{{c.prenomProprietaire}}</td>
+                <td>{{c.adresse}}</td>
+                <td>{{c.ville}}</td>
+                <td>{{c.codePostal}}</td>
+                <td>{{c.signature}}</td>
+                <td>{{c.lieuEmiss}}</td>
+                <td>{{c.datemiss}}</td>
+                <td>{{c.montant}}</td>
+                <td>{{c.numSerie}}</td>
+                <td>{{c.societeEmittrice}}</td>
+                <td>{{c.nombreTC}}</td>
+                <td>{{c.montantTotal}}</td>
+                <td>{{c.codeBanque}}</td>
+                <td>{{c.logo}}</td>
+                <td>{{c.ordreDePaiement}}</td>
+                <td>
+                    <a routerLink="/edit-travellercheques/{{c.idTC}}" class="waves-effect waves-light btn right green">Editer | </a>
+                    <a routerLink="/delete-travellercheques/{{c.idTC}}" class="waves-effect waves-light btn right red">Supprimer</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

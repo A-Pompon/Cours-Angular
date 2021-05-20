@@ -1,0 +1,33 @@
+<div class="row">
+    <form class="col-s12" [formGroup]="deleteForm"(ngSubmit)="remove()">
+        <div class="row">
+            <!-- <div class="input-field col-sm-6">
+                <label for="ID">ID</label>
+                <input id="id" type="text" formControlName="id" data-length="10">
+            </div> -->
+
+            <div class="input-field col-sm-6">
+                <label for="nom">NOM</label>
+                <input id="nom" type="text" formControlName="nom" data-length="10">
+            </div>
+
+            <div class="input-field col-sm-6">
+                <label for="prenom">PRENOM</label>
+                <input id="prenom" type="text" formControlName="prenom" data-length="10">
+            </div>
+
+            <div class="input-field col-sm-6">
+                <label for="mailAdmin">EMAIL</label>
+                <input id="mailAdmin" type="email" formControlName="mailAdmin" data-length="10"> <!--Mettre mailAdmin ??-->
+            </div>
+
+            <div class="input-field col-sm-6">
+                <label for="mdp">MOT DE PASSE</label>
+                <input id="mdp" type="password" formControlName="mdp" data-length="10">
+            </div>
+            
+        </div>
+        <button type="submit" [disabled]="!deleteForm.valid">Soumettre</button>
+    </form>
+</div>
+{{deleteForm.value | json}}

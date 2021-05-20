@@ -1,0 +1,94 @@
+<div class="row">
+    <form class="col-s12" [formGroup]="deleteFormTravellerCheques"(ngSubmit)="remove()">
+        <div class="row">
+
+            <div class="input-field col-sm-6">
+                <label for="tauxChange">Taux de change :</label>
+                <input id="tauxChange" type="text" formControlName="tauxChange" data-length="10">
+            </div>
+
+            <div class="input-field col-sm-6">
+                <label for="nomProprietaire">Nom propriétaire :</label>
+                <input id="nomProprietaire" type="text" formControlName="nomProprietaire" data-length="10">
+            </div>
+
+            <div class="input-field col-sm-6">
+                <label for="prenomProprietaire">Prénom propriétaire :</label>
+                <input id="prenomProprietaire" type="text" formControlName="prenomProprietaire" data-length="10"> 
+            </div>
+
+            <div class="input-field col-sm-6">
+                <label for="adresse">Adresse :</label>
+                <input id="adresse" type="text" formControlName="adresse" data-length="10">
+            </div>
+
+            <div class="input-field col-sm-6">
+                <label for="ville">Ville :</label>
+                <input id="ville" type="text" formControlName="ville" data-length="10">
+            </div>
+
+            <div class="input-field col-sm-6">
+                <label for="codePostal">Code postal :</label>
+                <input id="codePostal" type="text" formControlName="codePostal" data-length="10">
+            </div>
+
+            <div class="input-field col-sm-6">
+                <label for="signature">Signature :</label>
+                <input id="signature" type="text" formControlName="signature" data-length="10">
+            </div>
+
+            <div class="input-field col-sm-6">
+                <label for="lieuEmiss">Lieu d'émission :</label>
+                <input id="lieuEmiss" type="text" formControlName="lieuEmiss" data-length="10">
+            </div>
+
+            <div class="input-field col-sm-6">
+                <label for="datemiss">Date de l'émission :</label>
+                <input id="datemiss" type="text" formControlName="datemiss" data-length="10">
+            </div>
+
+            <div class="input-field col-sm-6">
+                <label for="montant">Montant :</label>
+                <input id="montant" type="text" formControlName="montant" data-length="10">
+            </div>
+
+            <div class="input-field col-sm-6">
+                <label for="numSerie">Numéro de série :</label>
+                <input id="numSerie" type="text" formControlName="numSerie" data-length="10">
+            </div>
+
+            <div class="input-field col-sm-6">
+                <label for="societeEmittrice">Société émittrice :</label>
+                <input id="societeEmittrice" type="text" formControlName="societeEmittrice" data-length="10">
+            </div>
+
+            <div class="input-field col-sm-6">
+                <label for="nombreTC">Nombre TC :</label>
+                <input id="nombreTC" type="text" formControlName="nombreTC" data-length="10">
+            </div>
+
+            <div class="input-field col-sm-6">
+                <label for="montantTotal">Montant total :</label>
+                <input id="montantTotal" type="text" formControlName="montantTotal" data-length="10">
+            </div>
+
+            <div class="input-field col-sm-6">
+                <label for="codeBanque">Code banque :</label>
+                <input id="codeBanque" type="text" formControlName="codeBanque" data-length="10">
+            </div>
+
+            <div class="input-field col-sm-6">
+                <label for="logo">Logo :</label>
+                <input id="logo" type="text" formControlName="logo" data-length="10">
+            </div>
+
+            <div class="input-field col-sm-6">
+                <label for="ordreDePaiement">Ordre de paiement :</label>
+                <input id="ordreDePaiement" type="text" formControlName="ordreDePaiement" data-length="10">
+            </div>
+            
+        </div>
+        <button type="submit" [disabled]="!deleteFormTravellerCheques.valid">Soumettre</button>
+    </form>
+</div>
+{{deleteFormTravellerCheques.value | json}}

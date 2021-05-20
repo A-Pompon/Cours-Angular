@@ -1,0 +1,29 @@
+<div class="row">
+    <form class="col-s12" [formGroup]="formLingots"(ngSubmit)="create()">
+        <div class="row">
+
+            <div class="input-field col-sm-6">
+                <label for="refLingots">Référence lingot :</label>
+                <input id="refLingots" type="text" formControlName="refLingots" data-length="10">
+            </div>
+
+            <div class="input-field col-sm-6">
+                <label for="nomLingots">Nom lingot :</label>
+                <input id="nomLingots" type="text" formControlName="nomLingots" data-length="10">
+            </div>
+
+            <div class="input-field col-sm-6">
+                <label for="produitRef">Produit référence :</label>
+                <input id="produitRef" type="text" formControlName="produitRef" data-length="10"> 
+            </div>
+
+            <div class="input-field col-sm-6">
+                <label for="poidsOrFinLing">Poids or :</label>
+                <input id="poidsOrFinLing" type="text" formControlName="poidsOrFinLing" data-length="10">
+            </div>
+            
+        </div>
+        <button type="submit" [disabled]="!formLingots.valid">Soumettre</button>
+    </form>
+</div>
+{{formLingots.value | json}}

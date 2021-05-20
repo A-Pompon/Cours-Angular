@@ -1,0 +1,29 @@
+/* NAV */
+#navbar {
+    display: flex;
+    justify-content: center;
+  }
+  #navbar ul {
+    list-style: none;
+  }
+  /* .listoption{
+    display: none;
+  } */
+
+  .listoption a {
+    margin: 5px;
+  }
+  .option{
+    position: relative;
+    float: left;
+  }
+  .listonglet {
+    display: flex;
+    justify-content: center;
+  }
+  .onglet{
+    margin: 5 20px;
+  }
+  
+  
+  /* END NAV */

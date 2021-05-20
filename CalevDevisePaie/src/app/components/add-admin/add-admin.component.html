@@ -1,0 +1,33 @@
+<div class="row">
+    <form class="col-s12" [formGroup]="form"(ngSubmit)="create()">
+        <div class="row">
+            <!-- <div class="input-field col-sm-6">
+                <label for="ID">ID</label>
+                <input id="idAdmin" type="text" formControlName="idAdmin" data-length="10">
+            </div>-->
+
+            <div class="input-field col-sm-6">
+                <label for="NOM">NOM</label>
+                <input id="nom" type="text" formControlName="nom" data-length="10">
+            </div>
+
+            <div class="input-field col-sm-6">
+                <label for="PRENOM">PRENOM</label>
+                <input id="prenom" type="text" formControlName="prenom" data-length="10">
+            </div>
+
+            <div class="input-field col-sm-6">
+                <label for="EMAIL">EMAIL</label>
+                <input id="mailAdmin" type="email" formControlName="mailAdmin" data-length="10"> <!--Mettre mailAdmin ??-->
+            </div>
+
+            <div class="input-field col-sm-6">
+                <label for="MDP">MOT DE PASSE</label>
+                <input id="mdp" type="password" formControlName="mdp" data-length="10">
+            </div>
+            
+        </div>
+        <button type="submit" [disabled]="!form.valid">Soumettre</button>
+    </form>
+</div>
+{{form.value | json}}

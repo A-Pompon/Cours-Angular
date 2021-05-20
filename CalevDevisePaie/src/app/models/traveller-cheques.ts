@@ -1,0 +1,20 @@
+export class TravellerCheques {
+    idTC:number;
+    tauxChange:number;
+    nomProprietaire:string;
+    prenomProprietaire:string;
+    adresse:string;
+    ville:string;
+    codePostal:string;
+    signature:null;
+    lieuEmiss:string;
+    datemiss:string;
+    montant:string;
+    numSerie:string;
+    societeEmittrice:null;
+    nombreTC:number;
+    montantTotal:number;
+    codeBanque:string;
+    logo:null;
+    ordreDePaiement:string;
+}
